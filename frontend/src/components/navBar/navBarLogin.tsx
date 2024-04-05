@@ -24,18 +24,18 @@ const NavBarLogin = () => {
           <input
             type="search"
             placeholder="Search"
-            className={`${theme === 'dark' ? 'bg-zinc-800' : 'bg-zinc-100'} ${'input rounded-[32px] h-[40px] w-[230px] hidden sm:block focus:outline-none focus:border-none'}`} />
+            className={`${theme === 'dark' ? 'bg-zinc-800' : 'bg-zinc-100'} ${'input rounded-full h-[40px] w-[230px] hidden sm:block focus:outline-none focus:border-none'}`} />
         </div>
         <div className="flex items-center gap-3">
-          <button className="btn btn-ghost flex items-center gap-3 min-h-[40px] h-[40px] border-[1px] border-zinc-200 rounded-[32px] px-4">
+          <button className="btn btn-ghost flex items-center gap-3 min-h-[40px] h-[40px] border-[1px] border-zinc-200 hover:bg-zinc-100 rounded-full px-4">
             <PiPencilSimpleLineThin size={18} />
             <span className="font-light">Write</span>
           </button>
-          <button className="btn btn-ghost flex items-center justify-center min-h-[40px] p-0 w-[40px] h-[40px] rounded-[32px] hover:bg-zinc-100">
+          <button className="btn btn-ghost flex items-center justify-center min-h-[40px] p-0 w-[40px] h-[40px] rounded-full hover:bg-zinc-100">
             <PiBellLight size={24} />
           </button>
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar hover:bg-zinc-100">
               <div className="w-[40px] h-[40px] rounded-full">
                 <img alt="user-profile" src={accessToken?.picture} />
               </div>
