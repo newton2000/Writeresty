@@ -1,17 +1,17 @@
 import { FormEvent, useContext } from "react"
 import { Contexts } from "../../contexts/contexts"
-import { ContextsType } from "../../types/types"
+import { contextsType } from "../../types/types"
 import { PiAtLight, PiEnvelopeSimpleLight, PiKeyLight, PiUserLight, PiX } from "react-icons/pi"
 import { GoogleLogin } from "@react-oauth/google"
 //import { jwtDecode } from "jwt-decode"
 
 const ModalSignUp = () => {
-  const { setToken } = useContext(Contexts) as ContextsType
+  const { setUtils, utils } = useContext(Contexts) as contextsType
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     console.log("it's working!!")
+    setUtils({ ...utils, token: String('credentialResponse.credential'), tokenBool: false })
     localStorage.setItem('token', '123')
-    setToken(false)
   }
 
   return (
@@ -48,8 +48,8 @@ const ModalSignUp = () => {
             </div>
             <GoogleLogin
               onSuccess={credentialResponse => {
+                setUtils({ ...utils, token: String(credentialResponse.credential), tokenBool: false })
                 localStorage.setItem('token', String(credentialResponse.credential))
-                setToken(false)
                 //const decoded = jwtDecode(String(credentialResponse.credential))
                 //console.table(decoded)
               }}

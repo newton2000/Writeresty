@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
 import { Logo } from "../svgElements/svgElements"
-import ModalSignIn from "../modals/modalSignIn"
-
 
 const NavBarUnLogin = () => {
   return (
@@ -15,7 +13,6 @@ const NavBarUnLogin = () => {
           <button
             className="btn bg-black border-1 border-white text-white hover:text-white hover:bg-black hover:border-white px-5 min-h-[40px] h-[40px] rounded-[32px] duration-300"
             onClick={() => {
-              <ModalSignIn />
               const openModal: HTMLElement | null = document.getElementById('sign_in_modal')
               if (openModal instanceof HTMLDialogElement) {
                 openModal.showModal()

@@ -20,11 +20,32 @@ export type feedListProps = {
   imageurl: string
 }
 
-export type ContextsType = {
+export type contextsType = {
+  utils: utilsType,
+  setUtils: Dispatch<SetStateAction<utilsType>>
+}
+
+export type utilsType = {
   theme: string | null,
-  setTheme: Dispatch<SetStateAction<string | null>>,
-  token: boolean,
-  setToken: Dispatch<SetStateAction<boolean>>
+  token: string | null,
+  tokenBool: boolean,
+  accessToken: accessTokenType
+}
+
+export type accessTokenType = {
+  aud: string,
+  azp: string,
+  email: string,
+  email_verified: boolean,
+  exp: number,
+  given_name: string,
+  iat: number,
+  iss: string,
+  jti: string,
+  name: string,
+  nbf: number,
+  picture: string,
+  sub: string
 }
 
 // interface test {

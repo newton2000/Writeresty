@@ -1,4 +1,4 @@
 import { createContext } from "react"
-import { ContextsType } from "../types/types"
+import { contextsType } from "../types/types"
 
-export const Contexts = createContext<ContextsType | null>(null)
+export const Contexts = createContext<contextsType | null>(null)
