@@ -1,9 +1,9 @@
 import ModalSignIn from "../../components/modals/modalSignIn"
 import ModalSignUp from "../../components/modals/modalSignUp"
 import NavBarUnLogin from "../../components/navBar/navBarUnLogin"
-import HomeFeed from "./homeFeed"
-import HomeHead from "./homeHead"
-import HomeTren from "./homeTrend"
+import HomeFeed from "../../components/home/homeFeed"
+import HomeHead from "../../components/home/homeHead"
+import HomeTren from "../../components/home/homeTrend"
 
 const HomeUnLogin = () => {
 

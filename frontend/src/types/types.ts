@@ -48,6 +48,11 @@ export type accessTokenType = {
   sub: string
 }
 
+export type topicType = {
+  topicId: string,
+  topicName: string
+}
+
 // interface test {
 //   a: string,
 //   b: string,
