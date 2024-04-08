@@ -17,7 +17,7 @@ export const metaOgs = (req: Request, res: Response) => {
   ogs({ url })
     .then((data) => {
       const { result } = data;
-      res.json({
+      res.status(200).json({
         success: result.success ? 1 : 0,
         link: result.ogUrl,
         meta: {
@@ -28,8 +28,10 @@ export const metaOgs = (req: Request, res: Response) => {
       });
     })
     .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'An error occurred while fetching open graph data' });
+      res.status(500).json({
+        messga: 'An error occurred while fetching open graph data',
+        error: error
+      });
     });
 }
 

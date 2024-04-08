@@ -1,4 +1,4 @@
-import HomeFeedList from "./homeFeedList"
+import HomeFeedList from "./postList"
 
 const HomeFeed = () => {
 
