@@ -23,7 +23,7 @@ export default {
       "h4": '1em', //1em is 16px
       "h5": '.83em', //.83em is 13.28px
       "h6": '.67em', //.67em is 10.72px
-    }
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   // daisyUI config (optional - here are the default values)

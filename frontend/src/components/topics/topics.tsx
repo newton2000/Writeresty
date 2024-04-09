@@ -18,7 +18,7 @@ const Topics = (topics: topicsType) => {
           <button
             key={index}
             onClick={() => setSelecTopic(items.topicId)}
-            className={`${items.topicId === selectTopic ? "bg-zinc-100 border-zinc-100" : ""} flex items-center justify-center btn btn-ghost text-zinc-600 max-w-[max-content] rounded-full border-[1px] border-zinc-200 min-h-[35px] h-[35px]`}
+            className={`${items.topicId === selectTopic ? "bg-zinc-100 border-zinc-100" : "border-zinc-200"} flex items-center justify-center btn btn-ghost text-zinc-600 max-w-[max-content] rounded-full border-[1px] min-h-[35px] h-[35px]`}
           >
             {items.topicName}
           </button>

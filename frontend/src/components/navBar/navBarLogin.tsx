@@ -42,7 +42,7 @@ const NavBarLogin = () => {
               <PiBellLight size={24} />
             </button>
             <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar hover:bg-zinc-100">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar hover:bg-transparent">
                 <div className="w-[40px] h-[40px] rounded-full">
                   {
                     accessToken.picture ?
@@ -52,7 +52,7 @@ const NavBarLogin = () => {
                   }
                 </div>
               </div>
-              <ul tabIndex={0} className="mt-3 z-[10] p-2 gap-1 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+              <ul tabIndex={0} className="mt-3 z-[20] p-2 gap-1 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                 <li>
                   <a className="justify-between py-1">
                     <div className="flex items-center gap-2">

@@ -21,7 +21,7 @@ const Footer = () => {
         </a> */}
       </div>
       <span className="text-white">
-        © Writeresty 2024
+        © 2024 Writeresty
       </span>
     </footer>
   )
