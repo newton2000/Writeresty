@@ -4,6 +4,7 @@ import NavBarUnLogin from "../../components/navBar/navBarUnLogin"
 import HomeFeed from "../../components/post/postMain"
 import HomeHead from "../../components/home/homeHead"
 import HomeTren from "../../components/home/homeTrend"
+import Footer from "../../components/footer/footer"
 
 const HomeUnLogin = () => {
 
@@ -19,6 +20,7 @@ const HomeUnLogin = () => {
       </div>
       <ModalSignIn />
       <ModalSignUp />
+      <Footer />
     </main>
   )
 }

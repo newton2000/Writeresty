@@ -10,14 +10,6 @@ const NavBarUnLogin = () => {
           <h1 className="text-h2 font-bold hidden text-white sm:block">Writeresty</h1>
         </Link>
         <div className="flex items-center gap-3">
-          {/* <a href="https://webring.wonderful.software#writeresty.com" title="วงแหวนเว็บ">
-            <img
-              alt="วงแหวนเว็บ"
-              width="32"
-              height="32"
-              src="https://webring.wonderful.software/webring.svg"
-            />
-          </a> */}
           <button
             className="btn bg-[#171717] border-1 border-white text-white hover:text-white hover:bg-black hover:border-white px-5 min-h-[40px] h-[40px] rounded-[32px] duration-300"
             onClick={() => {

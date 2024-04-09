@@ -1,5 +1,7 @@
+import Footer from "../../components/footer/footer"
 import NavBarLogin from "../../components/navBar/navBarLogin"
 import HomeFeed from "../../components/post/postMain"
+import Topics from "../../components/topics/topics"
 
 const HomeLogin = () => {
   const fakeData = {
@@ -78,14 +80,21 @@ const HomeLogin = () => {
     ]
   }
   return (
-    <>
-      <NavBarLogin
-        topics={fakeData.topics}
-      />
-      <div className="flex justify-center mt-5">
-        <HomeFeed />
+    <main>
+      <NavBarLogin />
+      <div className="flex flex-col md:flex-row justify-center mt-8">
+        <div className="flex flex-col gap-9">
+          <Topics
+            fakeData={fakeData.topics}
+          />
+          <HomeFeed />
+        </div>
+        <div className="flex items-center gap-3 h-[55px] px-3 bg-base-100 border-b-[1px] border-zinc-200 sticky top-0 z-10">
+          <div>right section</div>
+        </div>
       </div>
-    </>
+      <Footer />
+    </main>
   )
 }
 

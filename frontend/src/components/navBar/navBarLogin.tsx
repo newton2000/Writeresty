@@ -5,16 +5,15 @@ import { contextsType } from "../../types/types"
 import { Contexts } from "../../contexts/contexts"
 import { useContext } from "react"
 import { googleLogout } from "@react-oauth/google"
-import { NabarLoginPropsType } from "../../types/navbarLogin/navbarLoginPropsType"
 import { maskData } from "../../utils/maskData"
 
-const NavBarLogin = (navLogProps: NabarLoginPropsType) => {
+const NavBarLogin = () => {
   const { utils, setUtils } = useContext(Contexts) as contextsType
   const { accessToken, theme } = utils
 
   return (
     <>
-      <nav className="flex items-center justify-center h-[57px] bg-base-100 border-b-[1px] border-zinc-200 sticky top-0 z-20">
+      <nav className="flex items-center justify-center h-[57px] bg-base-100 border-b-[1px] border-zinc-200 z-20">
         <div className="flex items-center justify-between w-[100%] mx-[24px] my-[0] sm:mx-[32px]">
           <div className="flex items-center gap-3">
             <Link to={"/"} onClick={() => location.reload()} className="btn bg-transparent border-none px-0 hover:bg-transparent cursor-pointer">
@@ -35,14 +34,6 @@ const NavBarLogin = (navLogProps: NabarLoginPropsType) => {
             />
           </div>
           <div className="flex items-center gap-3">
-            {/* <a href="https://webring.wonderful.software#writeresty.com" title="วงแหวนเว็บ">
-              <img
-                alt="วงแหวนเว็บ"
-                width="32"
-                height="32"
-                src="https://webring.wonderful.software/webring.svg"
-              />
-            </a> */}
             <button className="btn btn-ghost flex items-center gap-3 min-h-[40px] h-[40px] border-[1px] border-zinc-200 hover:bg-zinc-100 rounded-full px-4">
               <PiPencilSimpleLineThin size={18} />
               <span className="font-light">Write</span>
@@ -103,14 +94,6 @@ const NavBarLogin = (navLogProps: NabarLoginPropsType) => {
           </div>
         </div>
       </nav>
-      <section className="flex items-center gap-3 h-[55px] px-3 bg-base-100 border-b-[1px] border-zinc-200 sticky top-[57px] z-10">
-        <button>+</button>
-        {
-          navLogProps.topics.map((items, index) => (
-            <button key={index} onClick={() => console.log(items.topicId)}>{items.topicName}</button>
-          ))
-        }
-      </section>
     </>
   )
 }

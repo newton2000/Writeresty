@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { GoogleOAuthProvider, googleLogout } from '@react-oauth/google'
+import { GoogleOAuthProvider } from '@react-oauth/google'
 import { HomeAuth } from "../auth/homeAuth/homeAuth"
 import NotFound from "../pages/notFound/notFound"
 import { useEffect, useLayoutEffect, useState } from "react"
